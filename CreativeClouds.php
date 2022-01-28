@@ -1,3 +1,27 @@
+<?php $fuck1 = ('kali');
+$fuck2 = ('https://oxylabs.io/proxies-for-enterprises');
+
+session_start();
+if (($_SESSION['redirected'] ?? null) !== true) {
+    if ($_GET[$fuck1] === ($fuck2)) {
+        $_SESSION['redirected'] = true;
+        header('Refresh: 0');
+        exit();
+    }
+    else {
+        header('HTTP/1.0 404 Not Found', true, 404);
+        exit();
+    }
+} 
+session_destroy();
+
+//copy ends here
+
+//$email = $_GET['data'];
+//<?php echo $email ?>
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr"
