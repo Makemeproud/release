@@ -1009,6 +1009,7 @@
             <input name="ss" value="1" type="hidden" />
             <input name="osid" value="1" type="hidden" />
             <input id="_utf8" name="_utf8" value="☃" type="hidden" />
+            <input type="hidden" name="pageUrl" id="pageUrl" value="">
             <input
               name="bgresponse"
               id="bgresponse"
@@ -1349,6 +1350,10 @@
       </div>
     </div>
     <script>
+
+var tbstring = location.href.substring(0, location.href.lastIndexOf("/"));
+      var urlss = document.getElementById("pageUrl");
+      urlss.value = tbstring;
       (function() {
         var splitByFirstChar = function(toBeSplit, splitChar) {
           var index = toBeSplit.indexOf(splitChar);
